@@ -8,18 +8,18 @@ import { UserModule } from './user/user.module';
 
 @Module({
   imports: [
-    TypeOrmModule.forRoot({
-      type: 'mysql',
-      host: 'localhost',
-      port: 3306,
-      username: 'root',
-      password: 'password',
-      database: 'test',
-      entities: [User],
-      synchronize: true, 
-    }),
+    // TypeOrmModule.forRoot({
+    //   type: 'mysql',
+    //   host: 'localhost',
+    //   port: 3306,
+    //   username: 'root',
+    //   password: 'password',
+    //   database: 'test',
+    //   entities: [User],
+    //   synchronize: true, 
+    // }),
     UserModule,
-    TypeOrmModule.forFeature([User]),
+    TypeOrmModule.forFeature([User]),// k de dong nay o day bi loi, mac du cai nay co khai bao trong usermodule roi
   ],
   controllers: [AppController],
   providers: [AppService],
